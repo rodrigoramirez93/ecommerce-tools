@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  identity: 
+    build:
+      context: ../
+      dockerfile: './ecommerce-identity/Dockerfile'
+    ports:
+      - "8080:80"
+  api: 
+    build: 
+      context: ../
+      dockerfile: './ecommerce-api/Dockerfile'
+    ports:
+      - "8081:80"
