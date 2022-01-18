@@ -13,3 +13,9 @@ services:
       dockerfile: './ecommerce-api/Dockerfile'
     ports:
       - "8081:80"
+  client:
+    build:
+      context: ../
+      dockerfile: './ecommerce-admin-web/Dockerfile'
+    ports:
+      - "8082:80"
