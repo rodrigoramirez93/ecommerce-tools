@@ -18,4 +18,7 @@ services:
       context: ../
       dockerfile: './ecommerce-admin-web/Dockerfile'
     ports:
-      - "8082:80"
+      - "8082:4200"
+      - "49153:49153"
+    volumes:
+      - "../ecommerce-admin-web/dist/ecommerce-admin-web:/usr/share/nginx/html:ro"
